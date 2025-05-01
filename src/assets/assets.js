@@ -121,37 +121,37 @@ export const categories = [
     {
         text:"Organic veggies",
         path:"Vegetables",
-        Image:"product_1",
+        image:product_1,
         bgColor: "#FEF6DA"
     },
     {
         text:"Fresh Fruits",
         path:"Fruits",
-        Image:"product_2",
+        image:product_2,
         bgColor: "#FEE0E0"
     },
     {
         text:"Instant Food",
         path:"Food",
-        Image:"product_3",
+        image:product_3,
         bgColor: "#F0F5DE"
     },
     {
         text:"Dairy Products",
         path:"Dairy",
-        Image:"product_4",
+        image:product_4,
         bgColor: "#FEE6CD"
     },
     {
         text:"Bakery & Breads",
         path:"Bakery",
-        Image:"product_5",
+        image:product_5,
         bgColor: "#E0F6FF"
     },
     {
         text:"Gains & Gereals",
         path:"Grains",
-        Image:"product_6",
+        image:product_6,
         bgColor: "#FEF6DA"
     }
 ]
