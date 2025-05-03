@@ -45,7 +45,6 @@ import product_1 from './product_1.png'
 import product_2 from './product_2.png'
 import product_3 from './product_3.png'
 import product_4 from './product_4.png'
-import product_5 from './product_5.png'
 import product_6 from './product_6.png'
 import product_7 from './product_7.png'
 import product_8 from './product_8.png'
@@ -55,7 +54,19 @@ import delivery_truck from './delivery_truck.svg'
 import leaf_icon from './leaf_icon.svg'
 import coin_icon from './coin_icon.svg'
 import trust_icon from './trust_icon.svg'
-
+import potato_1 from './potato_1.png'
+import potato_2 from './potato_2.png'
+import potato_3 from './potato_3.png'
+import potato_4 from './potato_4.png'
+import tomato_1 from './tomato_1.png'
+import tomato_2 from './tomato_2.png'
+import carrot_2 from './carrot_2.png'
+import product_5 from './product_5.jpg'
+import star from './star.svg'
+import plus from './plus.png'
+import minus from './minus.png'
+import whiteStar from './whiteStar.png'
+import cart from './cart.png'
 export const assets ={
     Banana,
     banner_img,
@@ -104,7 +115,7 @@ export const assets ={
     product_2,
     product_3,
     product_4,
-    product_5,
+    
     product_6,
     product_7,
     product_8,
@@ -113,7 +124,20 @@ export const assets ={
     delivery_truck,
     coin_icon,
     leaf_icon,
-    trust_icon
+    trust_icon,
+    potato_1,
+    potato_2,
+    potato_3,
+    potato_4,
+    tomato_1,
+    tomato_2,
+    carrot_2,
+    star,
+    plus,
+    minus,
+    whiteStar,
+    cart
+
 
 }
 
@@ -189,4 +213,90 @@ export const footerLinks =[
         ],
     },
 ];
+
+export const features = [
+    {
+        icon: delivery_truck,
+        title: "Faster Delivery",
+        description: 'Groceries delivered in under 30 minutes.'
+    },
+    {
+        icon: leaf_icon,
+        title: "Fresh Guaranteed",
+        description: 'Fresh produce straight from the source'
+    },
+    {
+        icon: coin_icon,
+        title: "Trusted by Thousands",
+        description: 'Loved by 20,000+ happy customers.'
+    }
+]
+
+export const dummyProducts = [
+    //vegetables
+    {
+        _id: "veg_1",
+        name: 'Potato 500g',
+        category: "Vegetables",
+        price: 25,
+        offerPrice: 20,
+        image: [potato_1, potato_2, potato_3,potato_4],
+        description:[
+            "Fresh and organic",
+            "Rich i carbohydrates",
+            "Ideal for curries and fries"
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    },
+    {
+        _id: "veg_2",
+        name: 'tomato',
+        category: "Vegetables",
+        price: 40,
+        offerPrice: 30,
+        image: [tomato_1, tomato_2],
+        description:[
+            "Juicy and ripe",
+            "Rich in Vitamin C",
+            "Perfect for salads and sauces"
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    },
+    {
+        _id: "veg_3",
+        name: 'carrot',
+        category: "Vegetables",
+        price: 35,
+        offerPrice: 30,
+        image: [carrot_2],
+        description:[
+            "Sweet and crunchy",
+            "Rich i carbohydrates",
+            "Ideal for curries and fries"
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    },
+    {
+        _id: "Meet_1",
+        name: 'Meet',
+        category: "Meet",
+        price: 755,
+        offerPrice: 730,
+        image: [cart_img_3, cat_4],
+        description:[
+            "Fresh and organic",
+            
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    }
+
+]
 
