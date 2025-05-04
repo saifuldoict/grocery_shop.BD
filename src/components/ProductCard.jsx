@@ -18,14 +18,14 @@ const ProductCard = ({product}) => {
                 <div className="flex items-center gap-0.5">
                     {Array(5).fill('').map((_, i) => (
                         
-                            <img key={i} className='md:w-3.5 w3' src={i<4 ? assets.star:assets.whiteStar}/>
+                            <img key={i} className='md:w-3.5 w3' src={i<4 ? assets.star:assets.whiteStar} alt='icon'/>
                         
                     ))}
                     <p>({4})</p>
                 </div>
                 <div className="flex items-end justify-between mt-3">
                     <p className="md:text-xl text-base font-medium text-primary">
-                        {currency}{product.offerPrice} {" "} <span className="text-gray-500/60 md:text-sm text-xs line-through">{currency}{product.price}</span>
+                        {currency}${product.offerPrice} {" "} <span className="text-gray-500/60 md:text-sm text-xs line-through">{currency}${product.price}</span>
                     </p>
                     <div onClick={(e)=>{e.stopPropagation();}} className="text-primary">
                         {!cartItems[product._id] ? (

@@ -296,6 +296,36 @@ export const dummyProducts = [
         createdAt: '2025-03-25T07:17:46.018z',
         updatedAt: '2025-03-25T07:18:13.103z',
         inStock:true
+    },
+    {
+        _id: "Meet_1",
+        name: 'Meet',
+        category: "Meet",
+        price: 755,
+        offerPrice: 730,
+        image: [cart_img_3, cat_4],
+        description:[
+            "Fresh and organic",
+            
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    },
+    {
+        _id: "Meet_1",
+        name: 'Meet',
+        category: "Meet",
+        price: 755,
+        offerPrice: 730,
+        image: [cart_img_3, cat_4],
+        description:[
+            "Fresh and organic",
+            
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
     }
 
 ]
