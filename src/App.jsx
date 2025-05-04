@@ -8,6 +8,7 @@ import About from './pages/About'
 import Contact from './pages/Contact'
 import Products from './pages/Products'
 import { Toaster } from 'react-hot-toast'
+import Footer from './components/Footer'
 function App() {
   
 const isSellerPath = useLocation().pathname.includes("seller")
@@ -25,6 +26,7 @@ const isSellerPath = useLocation().pathname.includes("seller")
           <Route path='/products' element={<Products/>}/>
         </Routes>
         </div>
+        {!isSellerPath && <Footer/>}
       </div>
      
     </>
