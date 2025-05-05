@@ -41,8 +41,8 @@ const Footer = () => {
                     </div>
                 </div>
                 <div>
-                    <p className='text-lg text-gray-800'>SUPPORT</p>
-                    <ul className='mt-3 flex flex-col gap-2 text-sm'>
+                    <p className='text-lg text-gray-800 sm:items-center'>SUPPORT</p>
+                    <ul className='mt-3 flex flex-col gap-2 text-sm '>
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
                         <li><a href="#">Contact</a></li>
@@ -52,14 +52,15 @@ const Footer = () => {
 
                 <div className='flex flex-wrap justify-between w-full md:w-[45%]'>
                     {
-                        footerLinks.map((section, index)=>(
+                        footerLinks.map((item, index)=>(
                             <div key={index}>
-                                <h3 className='font-semibold text-base text-gray-900'>{section.title}</h3>
+                                <h3 className='font-semibold text-base text-gray-900'>{item.title}</h3>
                                 <ul className='text-sm space-y-1'>
-                                   
-                                        
-                                        
-                                 
+                                   {item.links.map((link, i)=>(
+                                    <li key={i}>
+                                        <a href={link.url} className='hover:underline transition'>{link.text}</a>
+                                    </li>
+                                   ))}
                                 </ul>
                             </div>
                         ))
@@ -72,7 +73,7 @@ const Footer = () => {
             </div>
             <hr className='border-gray-300 mt-8' />
             <div className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
-                <p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
+                <p>© {new Date().getFullYear()} Saiful. All rights reserved.</p>
                 <ul className='flex items-center gap-4'>
                     <li><a href="#">Privacy</a></li>
                     <li><a href="#">Terms</a></li>
