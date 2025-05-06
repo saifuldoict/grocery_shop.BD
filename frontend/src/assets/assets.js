@@ -326,7 +326,38 @@ export const dummyProducts = [
         createdAt: '2025-03-25T07:17:46.018z',
         updatedAt: '2025-03-25T07:18:13.103z',
         inStock:true
-    }
+    },
+    {
+        _id: "veg_1",
+        name: 'Potato 500g',
+        category: "Vegetables",
+        price: 25,
+        offerPrice: 20,
+        image: [potato_1, potato_2, potato_3,potato_4],
+        description:[
+            "Fresh and organic",
+            "Rich i carbohydrates",
+            "Ideal for curries and fries"
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    },
+    {
+        _id: "Meet_1",
+        name: 'Meet',
+        category: "Meet",
+        price: 755,
+        offerPrice: 730,
+        image: [cart_img_3, cat_4],
+        description:[
+            "Fresh and organic",
+            
+        ],
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+        inStock:true
+    },
 
 ]
 

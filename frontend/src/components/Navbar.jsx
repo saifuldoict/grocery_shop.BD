@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import {Link, NavLink} from 'react-router-dom'
 import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
+import { IoSearchSharp } from "react-icons/io5";
 const Navbar = () => {
     
     const [open, setOpen] = useState(false)
@@ -32,7 +33,7 @@ const Navbar = () => {
               
                 <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
                     <input className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />
-                   
+                    <IoSearchSharp className='text-2xl'/>
                     
                 </div>
 

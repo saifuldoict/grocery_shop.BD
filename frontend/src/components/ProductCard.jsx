@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { assets } from '../assets/assets'
 import { useAppContext } from '../context/AppContext'
 
+
 const ProductCard = ({product}) => {
     const [count, setCount] = useState(0)
     const {currency, addToCart,removeFromCart, cartItems, navigate} = useAppContext()
@@ -18,7 +19,7 @@ const ProductCard = ({product}) => {
                 <div className="flex items-center gap-0.5">
                     {Array(5).fill('').map((_, i) => (
                         
-                            <img key={i} className='md:w-2.5 w3 ' src={i<4 ? assets.star:assets.whiteStar} alt='icon'/>
+                            <img key={i} className='md:w-2.5 w-3 ' src={i<4 ? assets.star:assets.whiteStar} alt='icon'/>
                         
                     ))}
                     <p>({4})</p>

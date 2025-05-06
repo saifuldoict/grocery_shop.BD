@@ -6,11 +6,12 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
 import Contact from './pages/Contact'
-import Products from './pages/Products'
+
 import { Toaster } from 'react-hot-toast'
 import Footer from './components/Footer'
 import { useAppContext } from './context/AppContext'
 import Login from './components/Login'
+import AllProducts from './pages/AllProducts'
 function App() {
   const {showUserLogin} = useAppContext()
 const isSellerPath = useLocation().pathname.includes("seller")
@@ -26,10 +27,12 @@ const isSellerPath = useLocation().pathname.includes("seller")
           <Route path='/' element={<Home/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
-          <Route path='/products' element={<Products/>}/>
+          <Route path='/products' element={<AllProducts/>}/>
         </Routes>
         </div>
-        {!isSellerPath && <Footer/>}
+        <div className='mt-5'>
+          {!isSellerPath && <Footer/>}
+        </div>
       </div>
      
     </>
