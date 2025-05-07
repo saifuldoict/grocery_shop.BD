@@ -1,27 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useAppContext } from '../context/AppContext';
+import { useParams } from 'react-router-dom';
 
 const ProductDetails = () => {
-    const product = {
-        name: "Casual Shoes",
-        category: "Sports",
-        price: 100,
-        offerPrice: 80,
-        rating: 4,
-        images: [
-            "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage.png",
-            "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage2.png",
-            "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage3.png",
-            "https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/card/productImage4.png"
-        ],
-        description: [
-            "High-quality material",
-            "Comfortable for everyday use",
-            "Available in different sizes"
-        ]
-    };
+    const {products, navigate, currency, addToCart} = useAppContext()
+    const {id} = useParams()
+    const [relatedProducts, setRelatedProducts] = useState(product.images[0]);
+    const [thumbnail, setThumbnail] = useState(null);
 
-    const [thumbnail, setThumbnail] = React.useState(product.images[0]);
-  return (
+const product = products.find((item)=>item._id===id);
+
+
+  return prduct &&(
     <div className="max-w-6xl w-full px-6">
             <p>
                 <span>Home</span> /
