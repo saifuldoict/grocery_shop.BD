@@ -37,6 +37,16 @@ export const AppContextProvider =({children})=>{
         setCartItems(cartData)
         toast.success("Added to Cart")
     }
+    //Get Cart Item Count (after product details.jsx work this field )
+ const getCartItemCount = ()=>{
+    let totalCount = 0
+    for(const item in cartItems){
+        totalCount+=cartItems[item]
+
+    }return totalCount;
+ }
+
+ 
     // Update Cart Item Quantity
     const updateCartItem =(itemId, quantity)=>{
         let cartData = structuredClone(cartItems);
