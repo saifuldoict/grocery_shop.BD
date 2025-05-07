@@ -16,9 +16,9 @@ const ProductCategroy = () => {
         searchCategory && (
           <div className='flex flex-col'>
             <p className='text-2xl font-medium'>{searchCategory.text}</p>
-            <div className='w-16 h-0.5  bg-primary'></div>
+            <div className='w-16 h-0.5 bg-primary rounded-full'></div>
           </div> 
-      )}
+      )}                   
       {
         filterProducts.length > 0 ?
         (<div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-6 mt-6'> 
