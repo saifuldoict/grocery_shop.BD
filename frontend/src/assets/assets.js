@@ -237,7 +237,7 @@ export const dummyProducts = [
     {
         _id: "veg_1",
         name: 'Potato 500g',
-        category: "Vegetables",
+        category: "Bakery & Breads",
         price: 25,
         offerPrice: 20,
         image: [potato_1, potato_2, potato_3,potato_4],
@@ -285,7 +285,7 @@ export const dummyProducts = [
     {
         _id: "Meet_1",
         name: 'Meet',
-        category: "Meet",
+        category: "Fruits",
         price: 755,
         offerPrice: 730,
         image: [cart_img_3, cat_4],
@@ -346,7 +346,7 @@ export const dummyProducts = [
     {
         _id: "Meet_1",
         name: 'Meet',
-        category: "Meet",
+        category: "Food",
         price: 755,
         offerPrice: 730,
         image: [cart_img_3, cat_4],
