@@ -71,7 +71,7 @@ const product = products.find((item)=>item._id===id);
                             Add to Cart
                         </button>
                         <button className="w-full py-3.5 cursor-pointer font-medium bg-indigo-500 text-white hover:bg-indigo-600 transition" >
-                            Buy now
+                            Buy now.
                         </button>
                     </div>
                 </div>
