@@ -5,7 +5,7 @@ import { useAppContext } from '../context/AppContext'
 
 const ProductCard = ({product}) => {
     
-    const {currency, addToCart,removeFromCart, cartItems, navigate} = useAppContext()
+    const {currency, addToCart,removeFromCart, cartItems, navigate, } = useAppContext()
     
   
   return product &&(
@@ -25,6 +25,7 @@ const ProductCard = ({product}) => {
                     ))}
                     <p>({4})</p>
                 </div>
+                
                 <div className="flex items-end justify-between mt-3">
                     <p className="md:text-xl text-base font-medium text-primary">
                         {currency}${product.offerPrice} {" "} <span className="text-gray-500/60 md:text-sm text-xs line-through">{currency}${product.price}</span>
