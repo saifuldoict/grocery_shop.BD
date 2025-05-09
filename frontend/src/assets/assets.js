@@ -67,6 +67,8 @@ import plus from './plus.png'
 import minus from './minus.png'
 import whiteStar from './whiteStar.png'
 import cart from './cart.png'
+import cross from './cross.png'
+import rightArrow from './rightArrow.png'
 export const assets ={
     Banana,
     banner_img,
@@ -136,7 +138,9 @@ export const assets ={
     plus,
     minus,
     whiteStar,
-    cart
+    cart,
+    cross,
+    rightArrow
 
 
 }
@@ -361,3 +365,6 @@ export const dummyProducts = [
 
 ]
 
+export const dummyAddress =[
+    
+]
