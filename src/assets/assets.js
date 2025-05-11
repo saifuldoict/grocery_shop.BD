@@ -368,3 +368,64 @@ export const dummyProducts = [
 export const dummyAddress =[
     
 ]
+
+export const dummyOrders =[
+    {
+        _id: "order_1",
+        userId: "user_1",
+        items: [
+            {
+                product: dummyProducts[3],
+                quantity: 2,
+                _id: "order_item_1",
+            },
+        ],
+        amount :89,
+        address: dummyAddress[0],
+        status: 'Order Placed',
+        paymentType: "Online",
+        isPaid: true,
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+
+    },
+     {
+        _id: "order_2",
+        userId: "user_1",
+        items: [
+            {
+                product: dummyProducts[3],
+                quantity: 2,
+                _id: "order_item_1",
+            },
+        ],
+        amount :89,
+        address: dummyAddress[0],
+        status: 'Order Placed',
+        paymentType: "Online",
+        isPaid: true,
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+
+    },
+     {
+        _id: "order_3",
+        userId: "user_3",
+        items: [
+            {
+                product: dummyProducts[3],
+                quantity: 2,
+                _id: "order_item_3",
+            },
+        ],
+        amount :39,
+        address: dummyAddress[0],
+        status: 'Order Placed',
+        paymentType: "COD",
+        isPaid: true,
+        createdAt: '2025-03-25T07:17:46.018z',
+        updatedAt: '2025-03-25T07:18:13.103z',
+
+    }
+
+]
