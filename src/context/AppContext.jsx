@@ -6,7 +6,7 @@ import { dummyProducts } from "../assets/assets.js";
 import toast from 'react-hot-toast';
 
 export const AppContextProvider =({children})=>{
-    const currency = import.meta.VITE_CURRENCY;
+    const currency = import.meta.env.VITE_CURRENCY;
     const navigate = useNavigate()
     const [user, setUser] = useState(null)
     const [isSeller, setIsSeller] = useState(false)
@@ -51,12 +51,13 @@ export const AppContextProvider =({children})=>{
  const getCartAmount = ()=>{
     let totalAmount = 0;
     for (const items in cartItems){
-       let itemInfo = products.find((product)=>product._id=== items);
+       let itemInfo = products.find((product)=>product._id === items);
        if(cartItems[items]>0){
-        totalAmount+=itemInfo.offerPrice * cartItems[items]
+        totalAmount +=itemInfo.offerPrice * cartItems[items]
        }
     }
- }
+ return Math.floor(totalAmount * 100)/100;
+}
 
  
     // Update Cart Item Quantity
