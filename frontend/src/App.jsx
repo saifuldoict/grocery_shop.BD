@@ -16,9 +16,11 @@ import ProductCategroy from './pages/ProductCategroy'
 import ProductDetails from './pages/ProductDetails'
 import CartPage from './pages/CartPage'
 import AddAddress from './pages/AddAddress'
-import MyOder from './pages/MyOder'
+import MyOrder from './pages/MyOrder'
+import SellerLogin from './components/seller/SellerLogin'
+
 function App() {
-  const {showUserLogin} = useAppContext()
+  const {showUserLogin, isSeller} = useAppContext()
 const isSellerPath = useLocation().pathname.includes("seller")
   return (
     <>
@@ -37,7 +39,8 @@ const isSellerPath = useLocation().pathname.includes("seller")
           <Route path='/products/:category/:id' element={<ProductDetails/>}/>
           <Route path='/cart' element={<CartPage/>}/>
           <Route path='/add-address' element={<AddAddress/>}/>
-          <Route path='/my-order' element={<MyOder/>}/>
+          <Route path='/my-order' element={<MyOrder/>}/>
+          <Route path ='/seller' element={isSeller ? null :<SellerLogin/>}/>
         </Routes>
         </div>
         <div className='mt-5'>

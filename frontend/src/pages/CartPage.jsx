@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import {useAppContext} from '../context/AppContext';
 import { assets, dummyAddress } from '../assets/assets';
 
+
 const CartPage = () => {
     const {navigate,products,currency, addToCart, updateCartItem,removeFromCart, cartItems,getCartCount, getCartAmount} = useAppContext()
  
@@ -23,7 +24,7 @@ const CartPage = () => {
   }
 
   const placeOrder = async ()=>{
-
+     
   }
   
   useEffect(()=>{

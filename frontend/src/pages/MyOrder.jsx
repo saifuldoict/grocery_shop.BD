@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useAppContext } from '../context/AppContext'
 import {dummyOrders} from '../assets/assets'
-const MyOder = () => {
+const MyOrder = () => {
     const [myOrders, setMyOrders]= useState([])
     const {currency} = useAppContext()
 
@@ -59,4 +59,4 @@ const MyOder = () => {
   )
 }
 
-export default MyOder
+export default MyOrder
