@@ -69,6 +69,9 @@ import whiteStar from './whiteStar.png'
 import cart from './cart.png'
 import cross from './cross.png'
 import rightArrow from './rightArrow.png'
+import add_product from './add_product.webp'
+import product_list from './product_list.webp'
+import order from './order.webp'
 export const assets ={
     Banana,
     banner_img,
@@ -140,7 +143,10 @@ export const assets ={
     whiteStar,
     cart,
     cross,
-    rightArrow
+    rightArrow,
+    add_product,
+    product_list,
+    order
 
 
 }
