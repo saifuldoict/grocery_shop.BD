@@ -28,13 +28,13 @@ const ProductCard = ({product}) => {
                 
                 <div className="flex items-end justify-between mt-3">
                     <p className="md:text-xl text-base font-medium text-primary">
-                        {currency}${product.offerPrice} {" "} <span className="text-gray-500/60 md:text-sm text-xs line-through">{currency}${product.price}</span>
+                        {currency}{product.offerPrice} {" "} <span className="text-gray-500/60 md:text-sm text-xs line-through">{currency}{product.price}</span>
                     </p>
                     <div onClick={(e)=>{e.stopPropagation();}} className="text-primary">
                         {!cartItems[product._id] ? (
                             <button className="flex items-center justify-center gap-1 bg-indigo-100 border border-indigo-300 md:w-[80px] w-[64px] h-[34px] rounded text-indigo-600 font-medium cursor-pointer" onClick={() => addToCart(product._id)} >
                                 <img className='w-3.5' src={assets.cart}/>
-                                Add
+                                Add.
                             </button>
                         ) : (
                             <div className="flex items-center justify-center gap-2 md:w-20 w-16 h-[34px] bg-primary/25 rounded select-none">
