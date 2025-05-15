@@ -72,6 +72,7 @@ import rightArrow from './rightArrow.png'
 import add_product from './add_product.webp'
 import product_list from './product_list.webp'
 import order from './order.webp'
+import box from './box.webp'
 export const assets ={
     Banana,
     banner_img,
@@ -146,7 +147,8 @@ export const assets ={
     rightArrow,
     add_product,
     product_list,
-    order
+    order,
+    box
 
 
 }
