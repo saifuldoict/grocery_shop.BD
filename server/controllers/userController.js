@@ -5,7 +5,7 @@ import UserModel from "../models/user";
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken'
 
-//Register Use
+//Register Use : /api/user/register
 export const register = async (req, res)=>{
     try{
         const {name, email, password}= req.body;
