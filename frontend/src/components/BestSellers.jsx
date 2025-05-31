@@ -1,9 +1,10 @@
 import React from 'react'
-import ProductCard from './ProductCard'
+import ProductCard from './ProductCard.jsx'
 import { useAppContext } from '../context/AppContext'
 
 const BestSellers = () => {
   const {products} = useAppContext()
+  console.log(products)
   return (
     <div className='mt-16 '>
         <p className='text-2xl md:text-3xl font-medium'>Best Sellers</p>

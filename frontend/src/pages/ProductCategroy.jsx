@@ -4,12 +4,12 @@ import { useParams } from 'react-router-dom'
 import { categories } from '../assets/assets'
 import ProductCard from '../components/ProductCard'
 
-const ProductCategroy = () => {
+const ProductCategory = () => {
   const {products} = useAppContext()
   const {category}= useParams()
 
-  const searchCategory = categories.find((item)=>item.path.toLocaleLowerCase()===category)
-  const filterProducts = products.filter((product)=>product.category.toLocaleLowerCase()===category) 
+  const searchCategory = categories.find((item)=>item.path.toLowerCase()=== category)
+  const filteredProducts = products.filter((product)=>product.category.toLowerCase()=== category) 
   return (
     <div className='mt-16'>
       {
@@ -20,12 +20,12 @@ const ProductCategroy = () => {
           </div> 
       )}                   
       {
-        filterProducts.length > 0 ?
+        filteredProducts.length > 0 ?
         (<div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 md:gap-6 mt-6'> 
           {
-            filterProducts.map((prodcut)=>(
+            filteredProducts.map((product)=>(
               
-                <ProductCard key={prodcut._id} product={prodcut}/>
+                <ProductCard key={product._id} product={product}/>
               
             ))
           }
@@ -40,4 +40,4 @@ const ProductCategroy = () => {
   )
 }
 
-export default ProductCategroy
+export default ProductCategory

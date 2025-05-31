@@ -13,6 +13,6 @@ const orderSchema = new mongoose.Schema({
     isPaid:{type: Boolean, required:true, default:false},
 },{timestamps:true})
 
-const Order = mongoose.models.Order || mongoose.model("Order", orderSchema);
+const Order = mongoose.models.Order || mongoose.model("order", orderSchema);
 
 export default Order;

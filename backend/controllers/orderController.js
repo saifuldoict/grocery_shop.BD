@@ -13,7 +13,7 @@ export const placeOrderCOD = async (req, res)=>{
         // Calculate Amount Using Items
         let amount = await items.reduce(async(acc, item)=>{
             const product = await Product.findById(item.Product);
-            return (await acc) + product.offerPrice * item.quantity;
+            return (await acc) + product * item.quantity;
         },0)
         // Add Tax Change (2%)
         amount += Math.floor(amount * 0.02);
@@ -28,7 +28,7 @@ export const placeOrderCOD = async (req, res)=>{
        return res.json({success: true, message: "Order Placed Successfully"});
     }catch(error){
         console.log(error.message);
-        res.json({success:false, message:error.message})
+       return res.json({success:false, message:error.message})
     } 
 }
 
@@ -44,7 +44,6 @@ export const getUserOrders = async (req, res)=>{
          res.json({success: true, orders});
 
     }catch(error){
-        console.log(error.message);
         res.json({success:false, message:error.message})
     }
 }
@@ -59,7 +58,6 @@ export const getAllOrders = async (req, res)=>{
          res.json({success: true, orders});
 
     }catch(error){
-        console.log(error.message);
         res.json({success:false, message:error.message})
     }
 }

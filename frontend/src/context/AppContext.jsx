@@ -32,19 +32,62 @@ export const AppContextProvider =({children})=>{
                 setIsSeller(false)
             }
         }catch(error){
-            console.log(error)
+            toast.error(error.message)
+        }
+    }
+
+    // Fetch User Auth Status, user Data and Cart Items
+      const fetchUser = async ()=>{
+        try{
+            const {data} = await axios.get('/api/user/is-auth');
+            if(data.success){
+                setUser(data.user)
+                setCartItems(data.user.cartItems)
+            }
+        }catch(error){
+            setUser(null)
         }
     }
 
     //Fetch All Products
     const fetchProducts = async ()=>{
-        setProducts(dummyProducts)
+        try{
+          const {data}= await axios.get('/api/product/list')
+          if(data.success){
+            setProducts(data.products)
+          }else{
+            toast.error(data.message)
+          }
+        }catch(error){
+            setUser(null)
+            toast.error(error.message)
+        }
     }
     
     useEffect(()=>{
+        fetchUser()
         fetchSeller()
         fetchProducts()
     },[])
+
+    // Updatd Database Cart Items
+useEffect(()=>{
+    const updateCart = async ()=>{
+        try{
+            const {data} = await axios.post('/api/cart/update',{cartItems})
+            if(!data.success){
+                toast.error(data.message)
+            }
+        }catch(error){
+            toast.error(error.message)
+
+        }
+    }
+    if(user){
+        updateCart()
+    }
+},[cartItems])
+
 
     // Add Product to Cart
     const addToCart = (itemId)=>{
@@ -100,7 +143,7 @@ const removeFromCart =(itemId)=>{
     setCartItems(cartData)
 }
    const value={
-        navigate,user,setUser,isSeller,setIsSeller,showUserLogin,setShowUserLogin,products,currency, addToCart, updateCartItem,removeFromCart, cartItems,searchQuery, setSearchQuery,getCartCount, getCartAmount, axios}
+        navigate,user,setUser,isSeller,setIsSeller,showUserLogin,setShowUserLogin,products,currency, addToCart, updateCartItem,removeFromCart, cartItems,searchQuery, setSearchQuery,getCartCount, getCartAmount, axios, fetchProducts, setCartItems}
 
     return(
         <AppContext.Provider value={value}>
